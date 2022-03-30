@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.theme-green .bs-datepicker-head {
+  background-color: #040489 !important;
+}
+
+.theme-green .bs-datepicker-body table td span.selected {
+  background-color: #040489 !important;
+}
+
+.theme-green .bs-datepicker-body table td.week span {
+  color: #040489;
+}
+
+.mat-tab-label {
+  width: 100%;
+  height: 10vh !important;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  background-color: #ffffffbd;
+}
+
+.mat-tab-header {
+  display: flex;
+  background-color: #0000001a;
+  border-radius: 11px;
+}
+
+.mat-ink-bar {
+  background-color: #cd853f !important;
+  height: 3.5px !important;
+}
+
+.mat-tab-label {
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+
+.mat-tab-label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.mat-tab-label:focus {
+  color: #b95d04;
+}
+
+.mat-tab-label:hover {
+  color: #b95d04;
+}
+
+
+.mat-tab-body-content {
+  overflow: initial !important;
+}
+
+// .mat-tab-labels {
+//   display: block !important;
+// }

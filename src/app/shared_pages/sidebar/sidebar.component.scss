@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+
+*{
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+mat-icon{
+    color: black;
+    font-family: 'Material Icons';
+    vertical-align: middle;
+}
+
+.top{
+    margin-top: 15px;
+    padding: 8px;
+    margin-left: 160px;
+    font-size: 30px;
+}
+.user{
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 50px;
+    padding: 18px 0px 5px 50px;
+    img{
+        margin-top: 16px;
+        width: 120px;
+        height: 120px;
+    }
+    .name{
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+.menu-head{
+    color: #466be0;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.menu-item{
+    margin: 0 10px 0 10px;
+    .menu-button{
+        display: block;
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-bottom: 10px;
+        margin-left: 24px;
+        padding-right: 49px;
+    }
+    .menu-button span{
+        margin-left: 15px;
+        color: black;
+        font-weight: bold;
+    }
+    .menu-button:hover{
+        color: rgba(255, 255, 255, 0.959);;
+        background: #2c334421;
+        mat-icon {
+            color: white;
+        }
+    }
+    .menu-button:focus {
+        color: rgba(255, 255, 255, 0.959);
+        background: #2c3344;
+        mat-icon {
+            color: white;
+        }
+    }
+    .menu-button:hover span{
+        color: rgba(255, 255, 255, 0.959);;
+    }
+    .menu-button:focus span{
+        color: rgba(255, 255, 255, 0.959);
+    }
+}

@@ -1,0 +1,32 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidebar mode='side' position="end">
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <div class="toolbar">
+                <mat-toolbar>
+                    <img src="../../../assets/img/travelbyrec.png" alt="Travel By Rec" class="logo" [routerLink]="['/accueil']">
+                    <div class="box">
+                        <a  [routerLink]="['/detailsHebergement']" >Hébérgement</a>
+                        <a  [routerLink]="['/nosServices']" >Services</a>
+                        <a  [routerLink]="['/thankYou']" >Devenir Client</a>
+                    </div>
+                    <div class="menu_fr">
+                        <mat-icon class="language_f">language</mat-icon>
+                        <div class="card-menu" (click)="sidebar.toggle()">
+                                <mat-icon class="menu_css">menu</mat-icon>
+                                <img src="../../../assets/img/user.svg" alt="User" class="user_image">
+                        </div>                            
+                    </div>
+                </mat-toolbar>
+            </div>
+            <div class="row main">
+                <router-outlet></router-outlet>
+            </div>
+            <div class="row">
+                <app-footer></app-footer>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

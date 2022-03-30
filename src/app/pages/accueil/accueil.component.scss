@@ -1,0 +1,147 @@
+.background_image {
+    border-radius: 16px;
+    height: 100vh;
+    background-image: url(../../../assets/img/travel.jpg);
+    background-size: cover;
+    min-height: 700px;
+    background-color: #0000007d;
+    background-blend-mode: darken;
+  }
+
+  mat-card  {
+    background: #fff0;
+    box-shadow: none !important;
+    margin-bottom: 26px;
+  }
+  
+  mat-card  img{
+    background: white;
+    border-radius: 9px;
+    height: 216px;
+    filter: brightness(0.8);
+    // filter: drop-shadow(2px 4px 6px black);
+    margin-bottom: 5px;
+  }
+
+  mat-card-content  p{
+    // margin-top: -8vh;
+    position: absolute;
+    top: 72%;
+    font-weight: 400;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    filter: saturate(0.5);
+  }
+
+  mat-card-content  span{
+    // margin-top: -8vh;
+    position: absolute;
+    top: 12%;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    filter: saturate(0.5);
+    line-height: normal;
+    font-weight: bold;
+    width: 90%;
+    left: 4%;
+  }
+  
+  #image_home {
+    width: 66%;
+    left: 16%;
+    top: 55vh;
+    font-size: 37px;
+    color: white;
+    text-align: center;
+    filter: saturate(0.5);
+    line-height: normal;
+    font-weight: bold;
+    position: relative;
+    display: block;
+  }
+  
+  #image_home .btn{
+    background: linear-gradient(90deg, #01019b 35%, #01019b 35%, #312ee7 100%);
+    padding-right: 21px;
+    color: white;
+    border-radius: 12px;
+    padding: 5px 20px 8px 24px;
+  }
+
+
+  mat-card-content  button{
+    margin-top: 21px;
+    background-color: white;
+    color: #04048b;
+    font-size: 15px;
+    padding-left: 21px;
+    padding-right: 21px;
+    border-radius: 12px;
+  }
+
+  .row{
+    margin-top: 3%;
+  }
+
+
+  .form_style{
+    background-color: white;
+    padding: 0px 46px 0px 14px;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    top: 2vh;
+
+    margin-right: 9vh;
+    margin-left: 9vh;
+  }
+
+  .card-search {
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border-radius: 13px;
+    padding: 8px 39px 2px 12px;
+    border: none;
+    cursor: pointer;
+    width: 0%;
+    top: 22px;
+    margin-top: -8px;
+    position: absolute;
+    background-color: #05059d;
+    right: 10px;
+  }
+  
+  .search {
+    font-size: 31px;
+    color: white;
+  }
+
+  .form-control {
+    padding: 0px !important;
+    border: none !important;
+  }
+
+  .form-control:focus {
+    border-color: #fdfeff00 !important;
+    box-shadow: 3px 2px 0px 0rem rgb(5 5 157 / 16%);
+    }
+
+  @media only screen and (max-width: 767px) {
+    #image_home {
+      top: 19vh;
+    }
+  }
+  
+
+  .border_right{
+    border-right: 1px solid #0000004d;
+  }
+  
+  
+  @media only screen and (max-width: 767px) {
+    .border_right{
+      border-right: none;
+    }
+  }
+

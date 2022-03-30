@@ -1,0 +1,125 @@
+<div class="background_image">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <form [formGroup]="searchForm" class="form_style">
+        <div class="row" style="margin-top: 2%;padding: 15px;">
+          <div class="col-md-2 border_right">
+              <label class="form-control-label"><b>ADRESSE </b></label>
+              <input type="text" class="form-control" formControlName="adresse" placeholder="Où allez-vous ?">
+          </div>
+          <div class="col-md-3 border_right">
+              <label class="form-control-label"><b>ARRIVEE</b></label>
+              <input bsDatepicker  [bsConfig]="{ isAnimated: true }" class="form-control"  formControlName="arrivee" placeholder="Ajouter une date">
+          </div>
+          <div class="col-md-3 border_right">
+              <label class="form-control-label"><b>DEPART</b></label>
+              <input bsDatepicker  [bsConfig]="{ isAnimated: true }" class="form-control"  formControlName="depart" placeholder="Ajouter une date">
+          </div>
+          <div class="col-md-4" style="padding-right: 24px;">
+              <label class="form-control-label"><b>VOYAGEURS</b></label>
+              <input type="text" class="form-control" formControlName="voyageurs" placeholder="0 Adultes, 0 Enfants, 0 Bébés" [disabled]="true">
+              <div class="card-search">
+                <mat-icon class="search">search</mat-icon>
+              </div>   
+          </div>
+        </div>
+      </form>
+      <b id="image_home">
+        Passionnés du service, experts de l'excellence, createurs d'emotions <br>
+        <button mat-button class="btn" [routerLink]="['/detailsHebergement']">Découvrez nos hébérgement</button>
+      </b>
+    </mat-card-content>
+  </mat-card>
+</div><br>
+<div class="row">
+  <h1 style="font-weight: bold;font-family: system-ui;font-size: 31px;">Destinations Populaires</h1>
+  <div class="row">
+    <div class="col-md-2 col-sm-4">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../../assets/img/chefchaouen.jpg" alt="Chefchaoun">
+        <mat-card-content>
+          <p>
+            Chefchaoun
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-2 col-sm-4">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../../assets/img/casablanca.jpg" alt="Casablanca">
+        <mat-card-content>
+          <p>
+            Casablanca
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-2 col-sm-4">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../../assets/img/rabat.jpg" alt="Rabat">
+        <mat-card-content>
+          <p>
+            Rabat
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-2 col-sm-4">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../../assets/img/agadir.jpg" alt="Agadir">
+        <mat-card-content>
+          <p>
+            Agadir
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-2 col-sm-4">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../../assets/img/marrakech.jpg" alt="Marrakech">
+        <mat-card-content>
+          <p>
+            Marrakech
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-2 col-sm-4">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../../assets/img/tanger.jpg" alt="Tanger">
+        <mat-card-content>
+          <p>
+            Tanger
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <h1 style="font-weight: bold;font-family: system-ui;font-size: 31px;">Découvrez les expériences Travelbyrec</h1>
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../../assets/img/img1.jpg" alt="Des expériences premium pour votre voyage" style="height: 539px;">
+        <mat-card-content>
+          <span>
+            Des expériences premium pour votre voyage <br>
+            <button mat-button [routerLink]="['/nosLogements']">Découvrez nos logements</button>
+          </span>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../../assets/img/img2.jpg" alt="Des services VIP adaptés à vos besoins à un prix réduit" style="height: 539px;">
+        <mat-card-content>
+          <span>
+            Des services VIP adaptés à vos besoins à un prix réduit <br>
+            <button mat-button [routerLink]="['/nosServices']">Découvrez nos services</button>
+          </span>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

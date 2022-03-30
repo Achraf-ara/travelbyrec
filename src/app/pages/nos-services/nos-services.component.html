@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="background_img"></div>
+  <div class="row" style="position: absolute;top: 10vh;">
+    <div class="col-md-6 col-sm-6 addwidth">
+      <span id="title_home">
+        <span class="title">Services Premium</span> <br>
+        <span class="title_two">Expériences améliorer</span> <br>
+        <p class="text_s">Travel By Rec vous propose différents services premium
+          pour vous faciliter la vie et améliorer votre confort.</p>
+        <button mat-button class="btn">Découvrez nos services</button>
+      </span>
+    </div>
+    <div class="col-md-6 col-sm-6  addwidthimgs">
+      <div style="margin-top: 12%;">
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <div class="img3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row tabs_s">
+    <mat-tab-group mat-align-tabs="center" animationDuration="1000ms">
+      <mat-tab label="Prestation du service">
+        <div class="row justify-content-center" style="padding: 15px 0px 20px 4px;">
+          <ng-container *ngFor="let service of prt_Service; let i = index">
+            <div class="col-md-4 col-sm-6">
+              <mat-card class="example-card shadow_card">
+                <div class="row" style="padding-bottom: 14px;">
+                  <div class="col" style="margin-right: -3vh;">
+                    <div class="im_div">
+                      <img mat-card-image [src]="service.svg_S" alt="Chefchaoun" class="img_service">
+                    </div>
+                  </div>
+                  <div class="col" style="margin-left: -16%;">
+                    <p class="desc">
+                      <b style="font-size: 20px; color: #00000094;">{{service.name_S}}</b> <br class="br_style">
+                      <span style="font-size: 16px;font-weight: 400;"> {{service.desc_S}}</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5" style="padding-bottom: 6px;">
+                    <button mat-button class="btn btn_mad">
+                      <span style="display: grid;line-height: normal;justify-content: center;">
+                        <span style="font-weight: 500;font-size: 17px;">{{service.prix_S}}</span>
+                        <span style="font-size: 13px;">MAD/{{service.value_S}}</span>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="col-md-7 col_7">
+                      <button mat-button class="btn_ajouter" (click)="onClickajouter(service)">Ajouter</button>
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+          </ng-container>
+        </div>
+      </mat-tab>
+      <mat-tab label="Service Transport/Transfert">
+        <div class="row" style="padding: 22px;">
+          Content 2
+        </div>
+      </mat-tab>
+      <mat-tab label="Service Conciergerie">
+        <div class="row" style="padding: 22px;">
+          Content 3
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  <div class="row">
+      <div class="col">
+        <div class="example-container mat-elevation-z8">
+            <table mat-table [dataSource]="ELEMENT_DATA" >
+                
+              <ng-container matColumnDef="Service">
+                <th mat-header-cell *matHeaderCellDef> Service </th>
+                <td mat-cell *matCellDef="let element"> {{element.service}} </td>
+              </ng-container>
+          
+              <ng-container matColumnDef="Quantité">
+                <th mat-header-cell *matHeaderCellDef> Quantité </th>
+                <td mat-cell *matCellDef="let element;let i = index" style="text-align:center">
+                  
+                  <div>
+                    <button  class="btn btn_quantit" (click)="onClickminus(i)"><mat-icon class="quantit_icon">remove</mat-icon></button>
+                    {{element.quantite}}
+                    <button class="btn btn_quantit" (click)="onClickplus(i)"><mat-icon class="quantit_icon">add</mat-icon></button>
+                  </div>
+                  
+               </td>
+              </ng-container>
+          
+              <ng-container matColumnDef="Sous-total">
+                <th mat-header-cell *matHeaderCellDef style="padding-left: 30px;"> Sous-total </th>
+                <td mat-cell *matCellDef="let element" style="text-align:center"> {{element.sous_total}} </td>
+              </ng-container>
+              
+              <ng-container matColumnDef="delete">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element;let i = index"> 
+                  <button mat-button class="btn btn-link btn_delet" (click)="onClickDelete(i)"><mat-icon>delete</mat-icon></button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="example-element-row" ></tr>
+            </table>
+          </div>
+      </div>
+      <div class="col" style="padding-top: 28px;">
+        <span id="total">
+            <span class="total_text">Total</span> <br>
+            <span class="title_mad">{{calculTotal}}MAD</span> <br>
+            <button mat-button class="btn_total">Confirmer et payer</button>
+        </span>
+      </div>
+  </div>
+</div>
