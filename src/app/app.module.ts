@@ -40,7 +40,7 @@ const UI_Modules = [
   MatTabsModule,
   MatDatepickerModule,
   MatTableModule
- 
+
 ]
 
 @NgModule({

@@ -1,3 +1,7 @@
+$primary-color:#cd853f;
+
+
+
 /////////////////sidebar///////////////////
 
 mat-sidenav{
@@ -29,7 +33,7 @@ mat-sidenav-content{
   }
 
   mat-toolbar {
-    background: white;    
+    background: white;
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
   }
 
@@ -47,11 +51,11 @@ mat-sidenav-content{
     text-align: center;
     padding: 12px;
     text-decoration: none;
-    font-size: 17.5px; 
+    font-size: 17.5px;
     line-height: 25px;
     border-radius: 4px;
   }
-  
+
   .logo {
     // width: 25.4vh;
     width: 21vh;
@@ -64,11 +68,11 @@ mat-sidenav-content{
     top: -7px;
     margin-left: 4px;
   }
-  
+
   .menu_fr {
     display: flex;
   }
-  
+
   .card-menu {
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     border-radius: 50px;
@@ -76,26 +80,26 @@ mat-sidenav-content{
     border: none;
     cursor: pointer;
   }
-  
+
   .menu_css {
     font-size: 31px;
     margin-right: 8px;
     position: relative;
     top: 2px;
   }
-  
+
   .box a:hover {
-    color: #cd853f;
-    border-bottom: 2px solid #cd853f;
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
     border-radius: 19px;
   }
-  
+
   .box a.active {
-    color: #cd853f;
-    border-bottom: 2px solid #cd853f;
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
     border-radius: 19px;
   }
-  
+
 
   @media only screen and (max-width: 800px) {
       .box {

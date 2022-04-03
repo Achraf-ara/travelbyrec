@@ -1,3 +1,7 @@
+$primary-color:#cd853f;
+$white-color:white;
+
+
 .background_image {
     border-radius: 16px;
     height: 100vh;
@@ -13,32 +17,39 @@
     box-shadow: none !important;
     margin-bottom: 26px;
   }
-  
+
   mat-card  img{
-    background: white;
+    background: $white-color;
     border-radius: 9px;
-    height: 216px;
-    filter: brightness(0.8);
-    // filter: drop-shadow(2px 4px 6px black);
+    filter: brightness(0.9);
     margin-bottom: 5px;
   }
 
+  .distination {
+    height: 216px;
+  }
+
+
   mat-card-content  p{
-    // margin-top: -8vh;
     position: absolute;
     top: 72%;
     font-weight: 400;
-    color: white;
+    color: $white-color;
     font-size: 26px;
     text-align: center;
     filter: saturate(0.5);
+    width: 100%;
+    bottom: 20px;
+    margin-left: -16px;
+    background: linear-gradient(to bottom, #00000014, #01019b );
+    border-radius: 9px;
   }
 
   mat-card-content  span{
     // margin-top: -8vh;
     position: absolute;
     top: 12%;
-    color: white;
+    color: $white-color;
     font-size: 32px;
     text-align: center;
     filter: saturate(0.5);
@@ -47,13 +58,13 @@
     width: 90%;
     left: 4%;
   }
-  
+
   #image_home {
     width: 66%;
     left: 16%;
     top: 55vh;
     font-size: 37px;
-    color: white;
+    color: $white-color;
     text-align: center;
     filter: saturate(0.5);
     line-height: normal;
@@ -61,11 +72,11 @@
     position: relative;
     display: block;
   }
-  
+
   #image_home .btn{
     background: linear-gradient(90deg, #01019b 35%, #01019b 35%, #312ee7 100%);
     padding-right: 21px;
-    color: white;
+    color: $white-color;
     border-radius: 12px;
     padding: 5px 20px 8px 24px;
   }
@@ -73,7 +84,7 @@
 
   mat-card-content  button{
     margin-top: 21px;
-    background-color: white;
+    background-color: $white-color;
     color: #04048b;
     font-size: 15px;
     padding-left: 21px;
@@ -87,7 +98,7 @@
 
 
   .form_style{
-    background-color: white;
+    background-color: $white-color;
     padding: 0px 46px 0px 14px;
     border-radius: 10px;
     display: block;
@@ -111,10 +122,10 @@
     background-color: #05059d;
     right: 10px;
   }
-  
+
   .search {
     font-size: 31px;
-    color: white;
+    color: $white-color;
   }
 
   .form-control {
@@ -132,13 +143,13 @@
       top: 19vh;
     }
   }
-  
+
 
   .border_right{
     border-right: 1px solid #0000004d;
   }
-  
-  
+
+
   @media only screen and (max-width: 767px) {
     .border_right{
       border-right: none;

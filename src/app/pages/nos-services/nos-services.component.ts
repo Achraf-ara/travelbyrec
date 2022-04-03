@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NosServicesComponent implements OnInit {
 
-  prt_Service:any[] = [
+  prestation_Service:any[] = [
     {
       name_S: "Un Cuisinier",
       desc_S: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -67,14 +67,14 @@ export class NosServicesComponent implements OnInit {
   }
 
   onClickplus(i){
-    this.ELEMENT_DATA[i].quantite = this.ELEMENT_DATA[i] ? this.ELEMENT_DATA[i].quantite + 1 : 2;
+    this.ELEMENT_DATA[i].quantite = this.ELEMENT_DATA[i].quantite + 1;
     this.ELEMENT_DATA[i].sous_total = this.ELEMENT_DATA[i].prix_unit * this.ELEMENT_DATA[i].quantite
     this.calculT()
   }
 
   onClickminus(i){
     if(this.ELEMENT_DATA[i].quantite > 1) {
-    this.ELEMENT_DATA[i].quantite = this.ELEMENT_DATA[i].quantite ? this.ELEMENT_DATA[i].quantite - 1 : 2;
+    this.ELEMENT_DATA[i].quantite = this.ELEMENT_DATA[i].quantite - 1;
     this.ELEMENT_DATA[i].sous_total -= this.ELEMENT_DATA[i].prix_unit
     this.calculT()
     }
@@ -85,12 +85,12 @@ export class NosServicesComponent implements OnInit {
     if(getElement.length > 0){
       getElement[0].sous_total += getElement[0].prix_unit
       getElement[0].quantite += 1
-    } else {      
+    } else {
       this.ELEMENT_DATA.push({
         service: service.name_S,
-        quantite: 1, 
-        sous_total: service.prix_S, 
-        prix_unit: service.prix_S, 
+        quantite: 1,
+        sous_total: service.prix_S,
+        prix_unit: service.prix_S,
         delete:''
       })
     }
@@ -99,7 +99,7 @@ export class NosServicesComponent implements OnInit {
   }
 
   onClickDelete(index){
-    this.ELEMENT_DATA.splice(index, 1); 
+    this.ELEMENT_DATA.splice(index, 1);
     this.ELEMENT_DATA = [...this.ELEMENT_DATA];
     this.calculT()
   }

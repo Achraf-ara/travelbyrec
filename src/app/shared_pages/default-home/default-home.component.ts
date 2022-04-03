@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { BreakpointObserver} from '@angular/cdk/layout'
 import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-default-home',
@@ -14,10 +14,10 @@ export class DefaultHomeComponent implements OnInit {
   sidenav! : MatSidenav;
 
   constructor(private observer : BreakpointObserver,
-              private router: Router) { }
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.router.navigate(['/accueil']);
   }
 
   ngAfterViewInit(): void {
@@ -34,5 +34,5 @@ export class DefaultHomeComponent implements OnInit {
     })
   }
 
-  
+
 }

@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+$primary-color:#cd853f;
+$tabs-color:#b95d04;
+
 html,
 body {
   height: 100%;
@@ -36,7 +39,7 @@ body {
 }
 
 .mat-ink-bar {
-  background-color: #cd853f !important;
+  background-color: $primary-color !important;
   height: 3.5px !important;
 }
 
@@ -53,11 +56,11 @@ body {
 }
 
 .mat-tab-label:focus {
-  color: #b95d04;
+  color: $tabs-color;
 }
 
 .mat-tab-label:hover {
-  color: #b95d04;
+  color: $tabs-color;
 }
 
 
