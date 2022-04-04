@@ -1,5 +1,4 @@
-$primary-color:#cd853f;
-$white-color:white;
+@use '../../../assets/variables.scss';
 
 
 .background_img {
@@ -78,14 +77,14 @@ $white-color:white;
 #title_home .btn {
   background: linear-gradient(90deg, #010152 35%, #010152 35%, #312ee7 100%);
   padding-right: 21px;
-  color: $white-color;
+  color: variables.$white-color;
   border-radius: 12px;
   padding: 5px 20px 8px 24px;
 }
 
 .btn_ajouter {
-  background-color: $primary-color;
-  color: $white-color;
+  background-color: variables.$primary-color;
+  color: variables.$white-color;
   border-radius: 5px;
   padding: 7px 9.1vh 7px 9.1vh;
   // height: 5.5vh;
@@ -95,7 +94,7 @@ $white-color:white;
 }
 
 .title {
-  color: $primary-color;
+  color: variables.$primary-color;
   letter-spacing: 1px;
   font-family: sans-serif;
   font-size: 6vh;
@@ -127,7 +126,7 @@ $white-color:white;
   height: 13vh;
   margin-top: 15px;
   border-radius: 11px;
-  background-color: $primary-color;
+  background-color: variables.$primary-color;
   opacity: 0.7;
 }
 
@@ -193,12 +192,12 @@ $white-color:white;
 
 .title_mad {
   font-size: xxx-large;
-  color: $primary-color;
+  color: variables.$primary-color;
 }
 
 .btn_total {
   background: linear-gradient(89deg, #010152 35%, #010152 35%, #2623e1 100%);
-  color: $white-color;
+  color: variables.$white-color;
   border-radius: 7px;
   padding: 15px 10vh 15px 10vh;
   font-weight: 400;
@@ -269,17 +268,17 @@ tr.example-element-row:not(.example-expanded-row):active {
 
 
 .btn_delet {
-  color: $primary-color;
+  color: variables.$primary-color;
 }
 
 .btn_delet:focus {
-  box-shadow: 0 0 0 0.1rem $primary-color;
+  box-shadow: 0 0 0 0.1rem variables.$primary-color;
 }
 
 .btn_quantit {
   padding: 0px 0px 0px 0px;
-  background-color: $primary-color;
-  color: $white-color;
+  background-color: variables.$primary-color;
+  color: variables.$white-color;
   border-radius: 20px;
   width: 22px;
   height: 22px;

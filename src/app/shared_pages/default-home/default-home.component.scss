@@ -1,5 +1,4 @@
-$primary-color:#cd853f;
-
+@use '../../../assets/variables.scss';
 
 
 /////////////////sidebar///////////////////
@@ -89,14 +88,14 @@ mat-sidenav-content{
   }
 
   .box a:hover {
-    color: $primary-color;
-    border-bottom: 2px solid $primary-color;
+    color: variables.$primary-color;
+    border-bottom: 2px solid variables.$primary-color;
     border-radius: 19px;
   }
 
   .box a.active {
-    color: $primary-color;
-    border-bottom: 2px solid $primary-color;
+    color: variables.$primary-color;
+    border-bottom: 2px solid variables.$primary-color;
     border-radius: 19px;
   }
 

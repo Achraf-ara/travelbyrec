@@ -1,6 +1,4 @@
-$primary-color:#cd853f;
-$white-color:white;
-
+@use '../../../assets/variables.scss';
 
 .background_image {
     border-radius: 16px;
@@ -19,7 +17,7 @@ $white-color:white;
   }
 
   mat-card  img{
-    background: $white-color;
+    background: variables.$white-color;
     border-radius: 9px;
     filter: brightness(0.9);
     margin-bottom: 5px;
@@ -34,7 +32,7 @@ $white-color:white;
     position: absolute;
     top: 72%;
     font-weight: 400;
-    color: $white-color;
+    color: variables.$white-color;
     font-size: 26px;
     text-align: center;
     filter: saturate(0.5);
@@ -49,7 +47,7 @@ $white-color:white;
     // margin-top: -8vh;
     position: absolute;
     top: 12%;
-    color: $white-color;
+    color: variables.$white-color;
     font-size: 32px;
     text-align: center;
     filter: saturate(0.5);
@@ -64,7 +62,7 @@ $white-color:white;
     left: 16%;
     top: 55vh;
     font-size: 37px;
-    color: $white-color;
+    color: variables.$white-color;
     text-align: center;
     filter: saturate(0.5);
     line-height: normal;
@@ -76,7 +74,7 @@ $white-color:white;
   #image_home .btn{
     background: linear-gradient(90deg, #01019b 35%, #01019b 35%, #312ee7 100%);
     padding-right: 21px;
-    color: $white-color;
+    color: variables.$white-color;
     border-radius: 12px;
     padding: 5px 20px 8px 24px;
   }
@@ -84,7 +82,7 @@ $white-color:white;
 
   mat-card-content  button{
     margin-top: 21px;
-    background-color: $white-color;
+    background-color: variables.$white-color;
     color: #04048b;
     font-size: 15px;
     padding-left: 21px;
@@ -98,7 +96,7 @@ $white-color:white;
 
 
   .form_style{
-    background-color: $white-color;
+    background-color: variables.$white-color;
     padding: 0px 46px 0px 14px;
     border-radius: 10px;
     display: block;
@@ -125,7 +123,7 @@ $white-color:white;
 
   .search {
     font-size: 31px;
-    color: $white-color;
+    color: variables.$white-color;
   }
 
   .form-control {

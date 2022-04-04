@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-$primary-color:#cd853f;
-$tabs-color:#b95d04;
+@use './assets/variables.scss';
+
 
 html,
 body {
@@ -39,7 +39,7 @@ body {
 }
 
 .mat-ink-bar {
-  background-color: $primary-color !important;
+  background-color: variables.$primary-color !important;
   height: 3.5px !important;
 }
 
@@ -56,11 +56,11 @@ body {
 }
 
 .mat-tab-label:focus {
-  color: $tabs-color;
+  color: variables.$tabs-color;
 }
 
 .mat-tab-label:hover {
-  color: $tabs-color;
+  color: variables.$tabs-color;
 }
 
 
