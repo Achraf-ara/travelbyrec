@@ -15,6 +15,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
+import { MatMenuModule} from '@angular/material/menu';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { AccueilComponent } from './pages/accueil/accueil.component';
@@ -39,7 +40,8 @@ const UI_Modules = [
   MatInputModule,
   MatTabsModule,
   MatDatepickerModule,
-  MatTableModule
+  MatTableModule,
+  MatMenuModule
 
 ]
 

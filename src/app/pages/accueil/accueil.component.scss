@@ -154,3 +154,66 @@
     }
   }
 
+  .matmenu_Style {
+    width: 32vh;
+  }
+
+
+  .single-categorie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title-categorie {
+    padding: 6px 5px 4px;
+    min-width: 150px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .sous-title {
+    opacity: 0.4;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .quantite-categorie {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    }
+
+  .quantite {
+    padding: 7px;
+  }
+
+
+  .btn_quantit {
+    padding: 0px 0px 0px 0px;
+    background-color: variables.$primary-color;
+    color: variables.$white-color;
+    border-radius: 20px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .btn_quantit:focus {
+    box-shadow: none;
+  }
+
+  .quantit_icon {
+    font-size: 14px;
+    padding: 0px 4px 0px 0px;
+  }
+
+  ::ng-deep  .mat-menu-panel.menuClasse {
+    width: 500px;
+    border-radius: 16px !important;
+    box-shadow: 0px 6px 20px rgb(0 0 0 / 20%) !important;
+    margin-top: 20px;
+   }
+
+   .minus-opacity {
+    opacity: 0.7;
+   }

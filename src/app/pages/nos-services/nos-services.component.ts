@@ -58,7 +58,7 @@ export class NosServicesComponent implements OnInit {
     {service: 'Linge et Pressing', quantite: 1, sous_total: 100, prix_unit: 100, delete:''}
   ];
 
-  calculTotal = 0
+  calculTotal:number = 0
 
   constructor() { }
 

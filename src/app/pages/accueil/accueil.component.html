@@ -4,25 +4,74 @@
       <form [formGroup]="searchForm" class="form_style">
         <div class="row" style="margin-top: 2%;padding: 15px;">
           <div class="col-md-2 border_right">
-              <label class="form-control-label"><b>ADRESSE </b></label>
-              <input type="text" class="form-control" formControlName="adresse" placeholder="Où allez-vous ?">
+            <label class="form-control-label"><b>ADRESSE </b></label>
+            <input type="text" class="form-control" formControlName="adresse" placeholder="Où allez-vous ?">
           </div>
           <div class="col-md-3 border_right">
-              <label class="form-control-label"><b>ARRIVEE</b></label>
-              <input bsDatepicker  [bsConfig]="{ isAnimated: true }" class="form-control"  formControlName="arrivee" placeholder="Ajouter une date">
+            <label class="form-control-label"><b>ARRIVEE</b></label>
+            <input bsDatepicker [bsConfig]="{ isAnimated: true }" class="form-control" formControlName="arrivee"
+              placeholder="Ajouter une date">
           </div>
           <div class="col-md-3 border_right">
-              <label class="form-control-label"><b>DEPART</b></label>
-              <input bsDatepicker  [bsConfig]="{ isAnimated: true }" class="form-control"  formControlName="depart" placeholder="Ajouter une date">
+            <label class="form-control-label"><b>DEPART</b></label>
+            <input bsDatepicker [bsConfig]="{ isAnimated: true }" class="form-control" formControlName="depart"
+              placeholder="Ajouter une date">
           </div>
-          <div class="col-md-4" style="padding-right: 24px;">
-              <label class="form-control-label"><b>VOYAGEURS</b></label>
-              <input type="text" class="form-control" formControlName="voyageurs" placeholder="0 Adultes, 0 Enfants, 0 Bébés" [disabled]="true">
+          <div class="col-md-4" style="padding-right: 24px;" [matMenuTriggerFor]="menu" #menuTrigger>
+            <label class="form-control-label"><b>VOYAGEURS</b></label>
+            <input type="text" class="form-control" formControlName="voyageurs" [value]="voyageurs"
+              placeholder="0 Adultes, 0 Enfants, 0 Bébés" style="background-color: #e9ecef00;">
               <div class="card-search">
                 <mat-icon class="search">search</mat-icon>
               </div>
           </div>
         </div>
+        <mat-menu #menu="matMenu" class="menuClasse">
+          <div class="container matmenu_Style">
+            <div class="row">
+              <div class="col single-categorie">
+                <span  class="title-categorie">Adultes <br> <b class="sous-title ">13 ans et plus</b></span>
+                <div class="quantite-categorie">
+                  <button class="btn btn_quantit" [ngClass]="{'minus-opacity': categories_Data[0].Adultes == 0}" (click)="onClickminus('Adultes',0,$event)">
+                    <mat-icon class="quantit_icon">remove</mat-icon>
+                  </button>
+                  <span class="quantite">{{categories_Data[0].Adultes}}</span>
+                  <button class="btn btn_quantit" (click)="onClickplus('Adultes',0,$event)">
+                    <mat-icon class="quantit_icon">add</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col single-categorie">
+                <span class="title-categorie">Enfants <br> <b class="sous-title ">De 2 à 12ans</b></span>
+                <div class="quantite-categorie">
+                  <button class="btn btn_quantit" [ngClass]="{'minus-opacity': categories_Data[1].Enfants == 0}" (click)="onClickminus('Enfants',1,$event)">
+                    <mat-icon class="quantit_icon">remove</mat-icon>
+                  </button>
+                  <span class="quantite">{{categories_Data[1].Enfants}}</span>
+                  <button class="btn btn_quantit" (click)="onClickplus('Enfants',1,$event)">
+                    <mat-icon class="quantit_icon">add</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col single-categorie">
+                <span  class="title-categorie">Bébés <br> <b class="sous-title "> - 2ans</b></span>
+                <div class="quantite-categorie">
+                  <button class="btn btn_quantit" [ngClass]="{'minus-opacity': categories_Data[2].Bebes == 0}" (click)="onClickminus('Bebes',2,$event)">
+                    <mat-icon class="quantit_icon">remove</mat-icon>
+                  </button>
+                  <span class="quantite">{{categories_Data[2].Bebes}}</span>
+                  <button class="btn btn_quantit" (click)="onClickplus('Bebes',2,$event)">
+                    <mat-icon class="quantit_icon">add</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
       </form>
       <b id="image_home">
         Passionnés du service, experts de l'excellence, createurs d'emotions <br>
@@ -46,7 +95,7 @@
     </div>
     <div class="col-md-2 col-sm-4">
       <mat-card class="example-card">
-        <img mat-card-image src="../../../assets/img/casablanca.jpg" alt="Casablanca"  class="distination">
+        <img mat-card-image src="../../../assets/img/casablanca.jpg" alt="Casablanca" class="distination">
         <mat-card-content>
           <p>
             Casablanca
@@ -56,7 +105,7 @@
     </div>
     <div class="col-md-2 col-sm-4">
       <mat-card class="example-card">
-        <img mat-card-image src="../../../assets/img/rabat.jpg" alt="Rabat"  class="distination">
+        <img mat-card-image src="../../../assets/img/rabat.jpg" alt="Rabat" class="distination">
         <mat-card-content>
           <p>
             Rabat
@@ -66,7 +115,7 @@
     </div>
     <div class="col-md-2 col-sm-4">
       <mat-card class="example-card">
-        <img mat-card-image src="../../../assets/img/agadir.jpg" alt="Agadir"  class="distination">
+        <img mat-card-image src="../../../assets/img/agadir.jpg" alt="Agadir" class="distination">
         <mat-card-content>
           <p>
             Agadir
@@ -76,7 +125,7 @@
     </div>
     <div class="col-md-2 col-sm-4">
       <mat-card class="example-card">
-        <img mat-card-image src="../../../assets/img/marrakech.jpg" alt="Marrakech"  class="distination">
+        <img mat-card-image src="../../../assets/img/marrakech.jpg" alt="Marrakech" class="distination">
         <mat-card-content>
           <p>
             Marrakech
@@ -86,7 +135,7 @@
     </div>
     <div class="col-md-2 col-sm-4">
       <mat-card class="example-card">
-        <img mat-card-image src="../../../assets/img/tanger.jpg" alt="Tanger"  class="distination">
+        <img mat-card-image src="../../../assets/img/tanger.jpg" alt="Tanger" class="distination">
         <mat-card-content>
           <p>
             Tanger
@@ -101,7 +150,8 @@
   <div class="row">
     <div class="col-md-6 col-sm-6">
       <mat-card class="example-card">
-        <img mat-card-image src="../../../assets/img/img1.jpg" alt="Des expériences premium pour votre voyage" style="height: 539px;">
+        <img mat-card-image src="../../../assets/img/img1.jpg" alt="Des expériences premium pour votre voyage"
+          style="height: 539px;">
         <mat-card-content>
           <span>
             Des expériences premium pour votre voyage <br>
@@ -112,7 +162,8 @@
     </div>
     <div class="col-md-6 col-sm-6">
       <mat-card class="example-card">
-        <img mat-card-image src="../../../assets/img/img2.jpg" alt="Des services VIP adaptés à vos besoins à un prix réduit" style="height: 539px;">
+        <img mat-card-image src="../../../assets/img/img2.jpg"
+          alt="Des services VIP adaptés à vos besoins à un prix réduit" style="height: 539px;">
         <mat-card-content>
           <span>
             Des services VIP adaptés à vos besoins à un prix réduit <br>
